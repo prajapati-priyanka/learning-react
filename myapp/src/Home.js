@@ -1,15 +1,11 @@
 function Home(){
  return(
 
-    <div className= "content">
+    <div className= "home">
     <h2>Main/Home Page</h2>
     </div>
   
 
- )
-
-
-
-}
+ )}
 
 export default Home;
