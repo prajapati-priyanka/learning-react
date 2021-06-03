@@ -2,7 +2,7 @@
 function Navbar(){
     return(
 
-        <div className= "Navbar">
+        <div className= "navbar">
         <h1>The Priyanka's Blog</h1>
         <div className="links">
           <a href="/">Home</a>
