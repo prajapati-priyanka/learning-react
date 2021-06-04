@@ -17,7 +17,7 @@ function Home() {
     },
     {
       title: "My Third Blog",
-      author: "Priya",
+      author: "Ankit",
       description: "I have always been wanted to write a blog",
       id: 2,
     },
@@ -25,7 +25,8 @@ function Home() {
 
   return (
     <div className="home">
-      <Bloglist blogs={blogs} />
+      <Bloglist blogs={blogs} title={"All Blogs!"} />
+      <Bloglist blogs={blogs.filter((item)=> item.author === "Ankit")} title={"Ankit's blogs"} />
     </div>
   );
 }
