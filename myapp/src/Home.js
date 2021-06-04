@@ -18,14 +18,19 @@ function Home() {
     {
       title: "My Third Blog",
       author: "Priya",
-      description: "I have always been wanted to write a blog",
+      description: "I desperately wanted to write a blog",
       id: 2,
     },
   ]);
 
+  function handleDelete(id) {
+    const newBlog = blogs.filter((item) => item.id !== id);
+    setBlogs(newBlog);
+  }
+
   return (
     <div className="home">
-      <Bloglist blogs={blogs} />
+      <Bloglist blogs={blogs} handleDelete={handleDelete} />
     </div>
   );
 }
