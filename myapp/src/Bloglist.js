@@ -1,5 +1,5 @@
-function Bloglist(props) {
-  const blogs = props.blogs;
+function Bloglist({blogs}) {
+//   const blogs = props.blogs;
 
   return (
     <div className="blog-list">
