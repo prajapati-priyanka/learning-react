@@ -15,16 +15,16 @@ function Create() {
     // it prevents automatically refreshing of a page
     event.preventDefault();
     const blogsAdded = { title, body, author };
-    // console.log(blogsAdded);
+      // console.log(blogsAdded);
 
     setIsPending(true);
 
     // a POST request to add the blog to existing db.json
 
-    fetch("http://localhost:8000/blogs", {
+    fetch("http://localhost:8000/blogs/", {
       method: "POST",
-      header: { "Content-Type": "application/json" },
-      body: JSON.stringify(blogsAdded),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(blogsAdded)
     }).then(() => {
       console.log("New Blog Added");
       setIsPending(false);
@@ -36,6 +36,7 @@ function Create() {
   return (
     <div className="create">
       <h2>Add a new Blog</h2>
+      
       <form onSubmit={submitHandler}>
         <label>Blog Title:</label>
         <input
