@@ -6,9 +6,11 @@ const useFetch = (url) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+
+     const abortCont = new AbortController();
     //   This Is just to show the loading until the fetch call happens. It is not reccomended.
     setTimeout(() => {
-      fetch(url)
+      fetch(url, { signal: abortCont.signal})
         .then((response) => {
           // This error is to handle the wrong endpoints
           if (!response.ok) {
@@ -24,10 +26,18 @@ const useFetch = (url) => {
         })
         // This is for network error or server is off
         .catch((err) => {
-          setIsPending(false);
-          setError(err.message);
-        }, 2000);
-    });
+          if(err.name === "AbortError"){
+            console.log("Fetch aborted");
+          }else{
+            setIsPending(false);
+            setError(err.message);
+
+          }
+        })
+        }, 1000);
+
+        return () => abortCont.abort();
+   
   }, [url]);
 
   return { data, isPending, error };
