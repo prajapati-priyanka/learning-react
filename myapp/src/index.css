@@ -58,3 +58,6 @@
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
+.blog-preview a{
+  text-decoration: none;
+}
