@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 
 function Navbar(){
-    return(
+    return(   
 
         <div className= "navbar">
         <h1>My Blog</h1>
