@@ -39,6 +39,7 @@
   color: var(--primary-color);
 }
 .content {
+  /* background-color: yellow; */
   display: flex;
   /* justify-content: center; */
   align-items: center;
@@ -71,3 +72,56 @@
 .blog-details-body {
   margin: 1rem 0;
 }
+
+/* create page */
+
+.create{
+  /* background-color: brown; */
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.create h2{
+  margin-bottom: 1.8rem;
+  color : var(--primary-color);
+}
+
+.create label{
+  display: block;
+  text-align: left;
+
+}
+.create input, .create textarea, .create select {
+
+  width:100%;
+  display: block;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  
+  
+}
+.create button, .blog-details button {
+  background-color: var(--primary-color);
+  color: white;
+  border:0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+
+}
+.not-found{
+  
+ 
+
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 1rem ;
+
+}
+.not-found h1{
+  margin-bottom: 10px;
+}
+
