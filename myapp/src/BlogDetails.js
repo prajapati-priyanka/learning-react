@@ -28,7 +28,7 @@ function BlogDetails() {
           <h2>{blogs.title}</h2>
           <p>Written by {blogs.author}</p>
           <div className="blog-details-body"> {blogs.body}</div>
-          <button className="" onClick={handleDelete}>
+          <button onClick={handleDelete}>
             Delete
           </button>
         </article>
