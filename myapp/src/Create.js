@@ -21,11 +21,12 @@ function Create() {
 
     // a POST request to add the blog to existing db.json
 
-    fetch("http://localhost:8000/blogs/", {
+    fetch("https://my-json-server.typicode.com/prajapati-priyanka/my-json-server/blogs/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blogsAdded)
     }).then(() => {
+      alert("For Online json-server Changes aren't persisted between calls.. Check in console for successful API call");
       console.log("New Blog Added");
       setIsPending(false);
       // history.go(-1);
