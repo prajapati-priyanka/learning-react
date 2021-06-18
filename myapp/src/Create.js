@@ -21,7 +21,7 @@ function Create() {
 
     // a POST request to add the blog to existing db.json
 
-    fetch("http://localhost:8000/blogs/", {
+    fetch("https://my-json-server.typicode.com/prajapati-priyanka/my-json-server/blogs/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(blogsAdded)

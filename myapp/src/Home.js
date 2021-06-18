@@ -2,7 +2,7 @@ import Bloglist from "./Bloglist";
 import useFetch from "./useFetch";
 
 function Home() {
-  const { data: blogs, isPending,error } = useFetch(" http://localhost:8000/blogs");
+  const { data: blogs, isPending,error } = useFetch(" https://my-json-server.typicode.com/prajapati-priyanka/my-json-server/blogs/");
 
   return (
     <div className="home">
