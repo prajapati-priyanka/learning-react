@@ -7,14 +7,16 @@ function BlogDetails() {
     data: blogs,
     error,
     isPending,
-  } = useFetch("http://localhost:8000/blogs/" + id);
+  } = useFetch("https://my-json-server.typicode.com/prajapati-priyanka/my-json-server/blogs/" + id);
 
   const history = useHistory();
 
   function handleDelete() {
-    fetch("http://localhost:8000/blogs/" + blogs.id, {
+    fetch("https://my-json-server.typicode.com/prajapati-priyanka/my-json-server/blogs/" + blogs.id, {
       method: "DELETE",
     }).then(() => {
+      alert("For Online json-server Changes aren't persisted between calls.. Check in console for successful API call");
+     console.log('Blog Deleted');
       history.push("/");
     });
   }
