@@ -15,6 +15,8 @@ function BlogDetails() {
     fetch("https://my-json-server.typicode.com/prajapati-priyanka/my-json-server/blogs/" + blogs.id, {
       method: "DELETE",
     }).then(() => {
+      alert("For Online json-server Changes aren't persisted between calls.. Check in console for successful API call");
+     console.log('Blog Deleted');
       history.push("/");
     });
   }
